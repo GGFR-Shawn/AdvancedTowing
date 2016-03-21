@@ -540,7 +540,7 @@ SA_Add_Player_Tow_Actions = {
 	}, nil, 0, false, true, "", "call SA_Attach_Tow_Ropes_Action_Check"];
 
 	player addAction ["Cannot Attach Tow Ropes", { 
-		hint "Your vehicle is not strong enough to tow this. Find a larger vehicle!"; 
+		["Your vehicle is not strong enough. Find a larger vehicle!"] call SA_Hint;
 	}, nil, 0, false, true, "", "call SA_Attach_Tow_Ropes_Action_Disabled_Check"];
 
 	player addAction ["Drop Tow Ropes", { 
