@@ -490,8 +490,12 @@ SA_Is_Supported_Cargo = {
 };
 
 SA_Hint = {
-	params ["_msg"];
-	hint _msg;
+    params ["_msg"];
+    if(!isNil "ExileClient_gui_notification_event_addNotification") then {
+        ["RepairFailedWarning", [_msg]] call ExileClient_gui_notification_event_addNotification; 
+    } else {
+        hint _msg;
+    };
 };
 
 SA_Hide_Object_Global = {
